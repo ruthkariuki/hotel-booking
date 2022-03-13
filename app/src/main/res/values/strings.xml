@@ -15,5 +15,7 @@
     <string name="login_password_placeholder">Password</string>
     <string name="login_button">Login</string>
     <string name="login_register_button">Register</string>
+    <string name="back_button">Back</string>
+    <string name="book_button">Book</string>
     <string name="login_registered_users_button">Registered Users</string>
 </resources>
