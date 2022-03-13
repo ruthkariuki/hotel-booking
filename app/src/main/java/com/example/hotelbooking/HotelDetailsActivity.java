@@ -37,5 +37,21 @@ public class HotelDetailsActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        Button bookButton = findViewById(R.id.book);
+
+        bookButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //link to the next activity
+                Intent intent = new Intent(getApplicationContext(), BookHotelActivity.class);
+
+                intent.putExtra("hotel", hotel);
+
+                //start the next activity
+                startActivity(intent);
+            }
+        });
     }
 }

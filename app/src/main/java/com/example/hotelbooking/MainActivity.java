@@ -33,10 +33,10 @@ public class MainActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText usernameET = (EditText) findViewById(R.id.editLoginTextUsername);
+                EditText usernameET = findViewById(R.id.editLoginTextUsername);
                 String username = usernameET.getText().toString();
 
-                EditText passwordET = (EditText) findViewById(R.id.editLoginTextPassword);
+                EditText passwordET = findViewById(R.id.editLoginTextPassword);
                 String password = passwordET.getText().toString();
 
                 SharedPreferences sharedPreferences = getSharedPreferences("ke.co.ba", MODE_PRIVATE);

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HotelBooking">
         <activity
+            android:name=".BookHotelActivity"
+            android:exported="false" />
+        <activity
             android:name=".HotelDetailsActivity"
             android:exported="false" />
         <activity
@@ -23,12 +26,10 @@
         </activity>
         <activity
             android:name=".RegisterActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".ViewHotelsActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
