@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
     private Button registerButton;
     private Button loginButton;
-    private Button registeredUsersButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,18 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
         registerButton = findViewById(R.id.register_button);
         loginButton = findViewById(R.id.login_button);
-        registeredUsersButton = findViewById(R.id.registered_users_button);
-
-        registeredUsersButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                //link to the next activity
-                Intent intent = new Intent(getApplicationContext(), RegisteredUsersActivity.class);
-                //start the next activity
-                startActivity(intent);
-            }
-        });
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 //link to the next activity
-                Intent intent = new Intent(getApplicationContext(), UserDetailsActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ViewHotelsActivity.class);
                 intent.putExtra("username",username);
                 //start the next activity
                 startActivity(intent);

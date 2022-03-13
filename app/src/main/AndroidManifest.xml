@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HotelBooking">
         <activity
-            android:name="com.example.hotelbooking.MainActivity"
+            android:name=".HotelDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,15 +22,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.hotelbooking.RegisterActivity"
+            android:name=".RegisterActivity"
             android:exported="true">
         </activity>
         <activity
-            android:name="com.example.hotelbooking.UserDetailsActivity"
-            android:exported="true">
-        </activity>
-        <activity
-            android:name="com.example.hotelbooking.RegisteredUsersActivity"
+            android:name=".ViewHotelsActivity"
             android:exported="true">
         </activity>
     </application>
