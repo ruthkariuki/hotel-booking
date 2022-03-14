@@ -11,12 +11,12 @@ import android.widget.TextView;
 public class HotelArrayAdapter extends ArrayAdapter<String> {
 
     private final Context context;
-    private final String[] values;
+    private final String[] hotelNames;
 
-    public HotelArrayAdapter(Context context, String[] values) {
-        super(context, R.layout.list_image, values);
+    public HotelArrayAdapter(Context context, String[] hotelNames) {
+        super(context, R.layout.list_image, hotelNames);
         this.context = context;
-        this.values = values;
+        this.hotelNames = hotelNames;
     }
 
     @Override
@@ -27,26 +27,25 @@ public class HotelArrayAdapter extends ArrayAdapter<String> {
         View rowView = inflater.inflate(R.layout.list_image, parent, false);
         TextView textView = (TextView) rowView.findViewById(R.id.label);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.hotel);
-        textView.setText(values[position]);
+        textView.setText(hotelNames[position]);
 
         // Change icon based on name
-        setImage(values[position], imageView);
+        setImage(hotelNames[position], imageView);
 
         return rowView;
     }
 
-    public static void setImage(String value, ImageView imageView) {
-        String s = value;
+    public static void setImage(String hotelName, ImageView imageView) {
 
-        if (s.equals("crowne")) {
+        if (hotelName.equals("crowne")) {
             imageView.setImageResource(R.drawable.crowne);
-        } else if (s.equals("eka")) {
+        } else if (hotelName.equals("eka")) {
             imageView.setImageResource(R.drawable.eka);
-        } else if (s.equals("four_points")) {
+        } else if (hotelName.equals("four_points")) {
             imageView.setImageResource(R.drawable.four_points);
-        } else if(s.equals("jacaranda")){
+        } else if(hotelName.equals("jacaranda")){
             imageView.setImageResource(R.drawable.jacaranda);
-        } else if (s.equals("sarova")) {
+        } else if (hotelName.equals("sarova")) {
             imageView.setImageResource(R.drawable.sarova);
         }
     }
